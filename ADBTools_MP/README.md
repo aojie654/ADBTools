@@ -1,20 +1,29 @@
-About ADBTools_LP
-===
+# About ADBTools_MP (In Developing....)
+
 ## 项目职责
-- 2018.06.13    
-创建了ADBTools_LP的第一个版本
-- 2018.06.13至今    
+
+### 2018.10.06
+
+创建了ADBTools_MP的第一个版本
+
+### 2018.10.06至今
+
 测试, 改进和维护
 
 ## 项目描述
-- 平台  
-Linux Deepin 15.5
 
-- 语言  
-Python + linux shell
+### 平台  
 
-- 简介  
-因为对于ADBTools_WB版本有些功能虽然有更好的想法, 但是由于Windows Batch本身的特点而无法实现的强烈不满. 从而导致了本工具的产生
+MacOS X 10.14 (Majove)
 
-- 收获  
-强化了个人的动手能力, 资料查阅能力, 对Python的一些规则有了更深一步的了解, 也算是对自我学习成果的一次检验
+### 语言  
+
+Python + MacOS X shell
+
+### 简介  
+
+Linux Python 版本在MacOS中不能正常使用
+
+### 收获  
+
+(开发中...)
