@@ -4,8 +4,8 @@
 # @Date  : 2018.06.13 11:24
 # @Desc  : Functions
 
-from .command import *
-from .status import *
+from .command import cls, confirm, cmd, operation_finish, check_file, operation_error, operation_finish, pause, print_menu
+from .status import device_status
 
 
 # Reboot

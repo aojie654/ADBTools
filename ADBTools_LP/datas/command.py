@@ -5,6 +5,7 @@
 # @Desc  : Command
 
 import os
+from .status import device_status
 
 overall_length = 90
 
@@ -44,6 +45,15 @@ def print_title():
     print_format(message_var, addition=addition_var, alignment='^')
     print('\n')
 
+def print_status():
+    status = device_status()
+    # Print devices status
+    if status == 'null':
+        print('No devices connected.')
+    elif status == 'unauthorized':
+        print("You devices has connected but unauthorized, authorize it at first.")
+    else:
+        print('At now, your devices is  in ' + status + '.')
 
 def cmd(cmd0_v):
     """Using os model to excuse command"""

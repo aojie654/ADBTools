@@ -4,10 +4,14 @@
 # @Date  : 2018.06.12 21:44
 # @Desc  : Print Info
 
-from .functions import *
-from .command import *
+from .functions import read_me, restart_adb, reboot_normal, reboot_recovery, reboot_bootloader, reboot_9008, \
+    boot_image, sideload_flash, open_mobile_api, flash_recovery, flash_boot, enable_nfc_all, clear_password, \
+    manual_command
+from .command import print_command, print_format, print_menu, print_title, print_status,command_error
 
 # Print Functions
+
+
 def menu_info_main():
     """Print Main Menu"""
     print_title()
