@@ -4,8 +4,8 @@
 # @Date  : 2018.06.13 11:24
 # @Desc  : Functions
 
-from .command import *
-from .status import *
+from .command import cls, confirm, cmd, operation_finish, check_file, operation_error, operation_finish, pause, print_menu
+from .status import device_status
 
 
 # Reboot
@@ -205,6 +205,46 @@ def clear_password():
     else:
         status_hint("clear password", "recovery")
 
+def no_netx():
+    """No Network X"""
+    cls()
+    status = device_status()
+    if status == 'normal':
+        android_version0 = input("""Input the number to select your android version:
+        [1] 7.1.1    -   9.0
+        [2] 7.0      -   7.1
+        [3] 5.x      -   6.x
+        Input anykey else to exit.""")
+        if android_version0== '1':
+            command = """
+    adb shell settings put global captive_portal_https_url https://www.google.cn/generate_204"""
+            cmd(command)
+        elif android_version0 == '2':
+            command = """ 
+    adb shell settings delete global captive_portal_server  
+    adb shell settings put global captive_portal_detection_enabled 0"""
+            cmd(command)
+        elif android_version0 =='3':
+            command = """
+            adb shell settings put global captive_portal_server www.g.cn"""
+            cmd(command)
+        operation_finish()
+    else:
+        status_hint("No Network X", "normal")
+
+def skip_wizard():
+    """Skip Wizard"""
+    cls()
+    status = device_status()
+    if status == 'normal':
+        command = """ 
+    adb shell settings put secure user_setup_complete 1
+    adb shell settings put global device_provisioned 1
+            """
+        cmd(command)
+        operation_finish()
+    else:
+        status_hint("Skip Wizard", "normal")
 
 def status_hint(action, modes):
     """Remind user to make phone in the right status."""

@@ -31,14 +31,4 @@ def device_status():
         else:
             status = 'null'
     return status
-
-
-def print_status():
-    status = device_status()
-    # Print devices status
-    if status == 'null':
-        print('No devices connected.')
-    elif status == 'unauthorized':
-        print("You devices has connected but unauthorized, authorize it at first.")
-    else:
-        print('At now, your devices is  in ' + status + '.')
+    

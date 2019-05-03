@@ -26,3 +26,4 @@ PS: I was **HIGHLY RECOMMANDED** that you should read the README in programs if 
 
 - Macos X 10.14 Mojave
 - Python 3.6.5 (Anaconda3 x64)
+PS. I think linux version is running well on macOS so this version is a copy of linux one.

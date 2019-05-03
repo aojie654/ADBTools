@@ -4,10 +4,14 @@
 # @Date  : 2018.06.12 21:44
 # @Desc  : Print Info
 
-from .functions import *
-from .command import *
+from .functions import read_me, restart_adb, reboot_normal, reboot_recovery, reboot_bootloader, reboot_9008, \
+    boot_image, sideload_flash, open_mobile_api, flash_recovery, flash_boot, enable_nfc_all, clear_password, \
+    no_netx, skip_wizard, manual_command
+from .command import print_command, print_format, print_menu, print_title, print_status,command_error
 
 # Print Functions
+
+
 def menu_info_main():
     """Print Main Menu"""
     print_title()
@@ -129,6 +133,8 @@ def menu_info_else():
     print_status()
     print_menu("ELSE")
     print_command("[CP]Clear Password")
+    print_command("[SW]Skip Wizard")
+    print_command("[NN]No Network X")
     print_command("[MC]Manual Command")
     print_command("[MN]Back Menu")
     print_menu('=')
@@ -143,6 +149,10 @@ def action_else():
 
     if input_var == 'cp':
         clear_password()
+    elif input_var == 'sw':
+        skip_wizard()
+    elif input_var == 'nn':
+        no_netx()
     elif input_var == 'mc':
         manual_command()
     elif input_var == 'mn':
