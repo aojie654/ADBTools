@@ -23,7 +23,3 @@ Python + MacOS X shell
 ### 简介  
 
 Linux Python 版本在MacOS中不能正常使用
-
-### 收获  
-
-(开发中...)
